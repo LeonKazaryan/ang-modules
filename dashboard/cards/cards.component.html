@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div *ngFor="let persona of infoArr">
+    <div (mouseenter)="persona.hovered=true" (mouseleave)="persona.hovered=false" class="card">
+      <h1 [ngClass]="{'add-text': persona.display}"> {{persona.name}}</h1>
+      <img [src]="persona.img" alt="" [style.border]="persona.display ? '5px solid red' : ''">
+      <h2> {{persona.position}}</h2>
+      <h2> {{persona.age}}</h2>
+      <p *ngIf="persona.hovered">{{persona.additional}}</p>
+    </div>
+  </div>
+</div>

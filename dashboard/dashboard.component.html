@@ -1,0 +1,8 @@
+<ul class="border">
+  <li class="li__element" *ngFor="let route of routes" (click)="navigateTo(route.path)">
+    {{route.viewValue}}
+  </li>
+</ul>
+
+<button class="button-12 homebutton" (click)="navigateToDashboard()">Домой</button>
+<router-outlet></router-outlet>
